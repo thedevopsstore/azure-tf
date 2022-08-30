@@ -23,7 +23,7 @@ location = "East US 2"
 
 ## Create virtual network
 resource "azurerm_virtual_network" "example" {
-  name                = "example-network"
+  name                = "open-network"
   location            = "East US 2" 
   resource_group_name = "lwplabsrg"
   address_space       = ["10.232.74.0/24"]
