@@ -27,4 +27,15 @@ resource "azurerm_virtual_network" "example" {
   location            = "East US 2" 
   resource_group_name = "lwplabsrg"
   address_space       = ["10.232.74.0/24"]
+
+   subnet {
+    name           = "app-subnet"
+    address_prefix = "10.232.74.0/28"
+  }
+
+  subnet {
+    name           = "lb-subnet"
+    address_prefix = "10.232.74.16/28"
+    
+  }
   }
